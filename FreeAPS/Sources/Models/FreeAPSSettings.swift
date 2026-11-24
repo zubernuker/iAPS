@@ -69,7 +69,7 @@ struct FreeAPSSettings: JSON, Equatable {
     var liveActivityWatchPredictions: Bool = true
     var liveActivityWatchDelta: Bool = true
     var liveActivityWatchEventual: Bool = true
-    var useTargetButton: Bool = false
+    var useTargetButton: Bool = true
     var alwaysUseColors: Bool = false
     var timeSettings: Bool = true
     var disable15MinTrend: Bool = false
@@ -116,7 +116,7 @@ struct FreeAPSSettings: JSON, Equatable {
     var fpus: Bool = true
     var fpuAmounts: Bool = false
     var carbButton: Bool = true
-    var profileButton: Bool = true
+    var profileButton: Bool = false
     var showInsulinActivity: Bool = false
     var showCobChart: Bool = false
     var glucoseOverrideThreshold: Decimal = 100

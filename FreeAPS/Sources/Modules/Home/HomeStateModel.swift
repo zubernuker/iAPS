@@ -61,7 +61,7 @@ extension Home {
         @Published var loopStatistics: (Int, Int, Double, String) = (0, 0, 0, "")
         @Published var standing: Bool = false
         @Published var preview: Bool = true
-        @Published var useTargetButton: Bool = false
+        @Published var useTargetButton: Bool = true
         @Published var overrideHistory: [OverrideHistory] = []
         @Published var alwaysUseColors: Bool = false
         @Published var useCalc: Bool = true
@@ -85,14 +85,14 @@ extension Home {
         @Published var displaySAGE = true
         @Published var sensorDays: Double = 10
         @Published var carbButton: Bool = true
-        @Published var profileButton: Bool = true
+        @Published var profileButton: Bool = false
         @Published var mealData = MealData()
         @Published var ai: Bool = false
         @Published var individual = Individual.default
         @Published var selectedMealInterval: DateFilter = .today
 
         // Chart data
-        var data = ChartModel(
+        @Published var data = ChartModel(
             suggestion: nil,
             glucose: [],
             activity: [],

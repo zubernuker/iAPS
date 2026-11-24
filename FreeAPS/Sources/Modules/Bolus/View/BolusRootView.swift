@@ -83,77 +83,73 @@ extension Bolus {
 
         private var cleanBolusView: some View {
             Form {
-                if fetch {
-                    Section {
-                        mealEntries
-                    } header: { Text("Meal Summary") }
-                }
-
-                Section {
-                    HStack {
-                        Text("Amount")
-                        Spacer()
-                        DecimalTextField(
-                            "0",
-                            value: $state.amount,
-                            formatter: formatter,
-                            autofocus: true,
-                            liveEditing: true
-                        )
-                        Text(!(state.amount > state.maxBolus) ? "U" : "😵").foregroundColor(.secondary)
-                    }
-                } header: { Text("Bolus") }
-
-                Section {
-                    if state.amount > 0 {
-                        Button {
-                            state.add()
-                            keepForNextWiew = true
+                Section(header: Text("Recommendation")) {
+                    if state.waitForSuggestion {
+                        HStack {
+                            Text("Wait please").foregroundColor(.secondary)
+                            Spacer()
                         }
-                        label: { Text(!(state.amount > state.maxBolus) ? "Enact bolus" : "Max Bolus exceeded!") }
-                            .frame(maxWidth: .infinity, alignment: .center)
-                            .disabled(state.amount > state.maxBolus)
-                            .listRowBackground((state.amount <= state.maxBolus) ? Color(.systemBlue) : Color(.systemGray4))
-                            .tint(.white)
                     } else {
-                        Button {
-                            state.hideModal()
-                            if fetch { state.saveMeal() }
-                            keepForNextWiew = true
+                        HStack {
+                            Text("Insulin required").foregroundColor(.secondary)
+                            Spacer()
+                            Text(
+                                formatter
+                                    .string(from: state.insulinRequired as NSNumber)! +
+                                    NSLocalizedString(" U", comment: "Insulin unit")
+                            ).foregroundColor(.secondary)
+                        }.contentShape(Rectangle())
+                            .onTapGesture {
+                                state.amount = state.insulinRequired
+                            }
+                        HStack {
+                            Text("Insulin recommended")
+                            Spacer()
+                            Text(
+                                formatter
+                                    .string(from: state.insulinRecommended as NSNumber)! +
+                                    NSLocalizedString(" U", comment: "Insulin unit")
+                            ).foregroundColor(.secondary)
+                        }.contentShape(Rectangle())
+                            .onTapGesture {
+                                state.amount = state.insulinRecommended
+                            }
+                    }
+                }
+
+                if !state.waitForSuggestion {
+                    Section(header: Text("Bolus")) {
+                        HStack {
+                            Text("Amount")
+                            Spacer()
+                            DecimalTextField(
+                                "0",
+                                value: $state.amount,
+                                formatter: formatter,
+                                autofocus: true,
+                                cleanInput: true
+                            )
+                            Text("U").foregroundColor(.secondary)
                         }
-                        label: {
-                            Text("Continue without bolus")
-                                .frame(maxWidth: .infinity, alignment: .center)
+                    }
+
+                    Section {
+                        Button { state.add() }
+                        label: { Text("Enact bolus") }
+                            .disabled(state.amount <= 0)
+                    }
+
+                    Section {
+                        if waitForSuggestion {
+                            Button { state.showModal(for: nil) }
+                            label: { Text("Continue without bolus") }
                         }
                     }
                 }
             }
-            .onAppear {
-                if !state.useCalc {
-                    state.viewActive()
-                }
-            }
-            .onDisappear {
-                if !state.useCalc {
-                    state.notActive()
-                }
-            }
-            .dynamicTypeSize(...DynamicTypeSize.xxLarge)
             .navigationTitle("Enact Bolus")
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationBarItems(
-                leading: Button {
-                    keepForNextWiew = state.carbsView(fetch: fetch, hasFatOrProtein: hasFatOrProtein, mealSummary: meal)
-                }
-                label: {
-                    HStack {
-                        Image(systemName: "chevron.backward")
-                        Text("Meal")
-                    }
-                },
-                trailing: Button { state.hideModal() }
-                label: { Text("Cancel") }
-            )
+            .navigationBarTitleDisplayMode(.automatic)
+            .navigationBarItems(leading: Button("Close", action: state.hideModal))
         }
 
         private var hasFatOrProtein: Bool {

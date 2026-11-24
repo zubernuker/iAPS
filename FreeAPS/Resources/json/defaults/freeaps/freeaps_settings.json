@@ -55,7 +55,7 @@
     "useLiveActivity" : false,
     "liveActivityChart": false,
     "liveActivityChartShowPredictions": true,
-    "useTargetButton" : false,
+    "useTargetButton" : true,
     "alwaysUseColors" : false,
     "timeSettings" : true,
     "allowBolusShortcut": false,

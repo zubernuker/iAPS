@@ -49,7 +49,7 @@ extension AddCarbs {
         }
 
         func add(_ continue_: Bool, fetch: Bool) {
-            carbs = min(carbs, maxCarbs)
+            //carbs = min(carbs, maxCarbs)
             id_ = UUID().uuidString
 
             let carbsToStore = [CarbsEntry(

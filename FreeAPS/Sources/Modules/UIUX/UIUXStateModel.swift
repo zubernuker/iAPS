@@ -11,7 +11,7 @@ extension UIUX {
         @Published var rulerMarks: Bool = false
         @Published var skipBolusScreenAfterCarbs: Bool = false
         @Published var useFPUconversion: Bool = true
-        @Published var useTargetButton: Bool = false
+        @Published var useTargetButton: Bool = true
         @Published var hours: Decimal = 6
         @Published var alwaysUseColors: Bool = false
         @Published var minimumSMB: Decimal = 0.3
@@ -24,7 +24,7 @@ extension UIUX {
         @Published var fpus: Bool = true
         @Published var fpuAmounts: Bool = false
         @Published var carbButton: Bool = true
-        @Published var profileButton: Bool = true
+        @Published var profileButton: Bool = false
         @Published var lightMode: LightMode = .auto
         @Published var showInsulinActivity: Bool = false
         @Published var showCobChart: Bool = false
