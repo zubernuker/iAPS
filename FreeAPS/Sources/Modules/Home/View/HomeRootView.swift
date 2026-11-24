@@ -610,49 +610,6 @@ extension Home {
                 .padding(.horizontal, 10)
         }
 
-        var activeIOBView: some View {
-            addBackground()
-                .frame(minHeight: 190)
-                .overlay {
-                    ActiveIOBView(
-                        data: $state.iobData
-                    )
-                }
-                .clipShape(RoundedRectangle(cornerRadius: 15))
-                .addShadows()
-                .padding(.horizontal, 10)
-        }
-
-        var activeCOBView: some View {
-            addBackground()
-                .frame(minHeight: 190)
-                .overlay {
-                    ActiveCOBView(data: $state.iobData)
-                }
-                .clipShape(RoundedRectangle(cornerRadius: 15))
-                .addShadows()
-                .padding(.horizontal, 10)
-        }
-
-        var insulinView: some View {
-            addBackground()
-                .frame(minHeight: 280)
-                .overlay {
-                    InsulinSummaryView(
-                        neg: $state.neg,
-                        tddChange: $state.tddChange,
-                        tddAverage: $state.tddAverage,
-                        tddYesterday: $state.tddYesterday,
-                        tdd2DaysAgo: $state.tdd2DaysAgo,
-                        tdd3DaysAgo: $state.tdd3DaysAgo,
-                        tddActualAverage: $state.tddActualAverage
-                    )
-                }
-                .clipShape(RoundedRectangle(cornerRadius: 15))
-                .addShadows()
-                .padding(.horizontal, 10)
-        }
-
         var loopPreview: some View {
             addBackground()
                 .frame(minHeight: 160)
