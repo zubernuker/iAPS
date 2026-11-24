@@ -39,7 +39,9 @@ jobs:
           path: spm
           key: spm-${{ runner.os }}-${{ hashFiles('**/Package.resolved') }}
           restore-keys: spm-${{ runner.os }}-
-
+      - name: Show deployment targets
+        run: grep -o 'IPHONEOS_DEPLOYMENT_TARGET = [^;]*' FreeAPS.xcodeproj/project.pbxproj | sort | uniq -c
+        
       - name: Build (signing disabled)
         run: |
           set -o pipefail
@@ -55,6 +57,7 @@ jobs:
             -skipMacroValidation \
             COMPILER_INDEX_STORE_ENABLE=NO \
             CODE_SIGN_STYLE=Manual \
+            IPHONEOS_DEPLOYMENT_TARGET=17.0 \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY="" \
