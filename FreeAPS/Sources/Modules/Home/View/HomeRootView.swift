@@ -922,11 +922,6 @@ extension Home {
                     break
                 }
             }
-            .onAppear {
-                if onboarded.first?.firstRun ?? true {
-                    state.fetchPreferences()
-                }
-            }
             .navigationTitle("Home")
             .navigationBarHidden(true)
             .ignoresSafeArea(.keyboard)
