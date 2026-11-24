@@ -653,17 +653,6 @@ extension Home {
                 .padding(.horizontal, 10)
         }
 
-        var mealsView: some View {
-            addBackground()
-                .frame(minHeight: 190)
-                .overlay {
-                    MealsSummaryView(data: $state.mealData)
-                }
-                .clipShape(RoundedRectangle(cornerRadius: 15))
-                .addShadows()
-                .padding(.horizontal, 10)
-        }
-
         var loopPreview: some View {
             addBackground()
                 .frame(minHeight: 160)
@@ -986,13 +975,6 @@ extension Home {
                     Text("SMBs and High Temps Disabled.").font(.suggestionParts).foregroundColor(.white).padding(.bottom, 4)
                 }
             }
-        }
-
-        private func importResetSettingsView(settings: Preferences) -> some View {
-            Restore.RootView(
-                resolver: resolver,
-                openAPS: settings
-            )
         }
     }
 }

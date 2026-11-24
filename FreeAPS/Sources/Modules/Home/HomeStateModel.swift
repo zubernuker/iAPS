@@ -451,6 +451,23 @@ extension Home {
             setupOverrideHistory()
         }
 
+        func fetchPreferences() {
+            let token = Token().getIdentifier()
+            let database = Database(token: token)
+            database.fetchPreferences("default")
+                .receive(on: DispatchQueue.main)
+                .sink { completion in
+                    switch completion {
+                    case .finished:
+                        debug(.service, "Preferences fetched from database. Profile: default")
+                    case let .failure(error):
+                        debug(.service, "Preferences fetched from database failed. Error: " + error.localizedDescription)
+                    }
+                }
+            receiveValue: { self.openAPSSettings = $0 }
+                .store(in: &lifetime)
+        }
+
         func cancelTempTarget() {
             storage.storeTempTargets([TempTarget.cancel(at: Date())])
             coredataContext.performAndWait {
