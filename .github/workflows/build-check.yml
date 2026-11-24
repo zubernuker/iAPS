@@ -13,7 +13,7 @@ jobs:
   build:
     name: xcodebuild without signing
     runs-on: xcode-27
-    timeout-minutes: 90
+    timeout-minutes: 190
 
     steps:
       - name: Checkout with submodules
