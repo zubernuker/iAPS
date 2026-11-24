@@ -443,7 +443,6 @@
 		E4984C5262A90469788754BB /* PreferencesEditorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8BA8533F56BC55748CA877 /* PreferencesEditorProvider.swift */; };
 		E97285ED9B814CD5253C6658 /* AddCarbsDataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F48C3AC770D4CCD0EA2B0C2 /* AddCarbsDataFlow.swift */; };
 		E974172296125A5AE99E634C /* PumpConfigRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD22C985B79A2F0D2EA3D9D /* PumpConfigRootView.swift */; };
-		F21580A52E47B4FF003BC827 /* PeakPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21580A42E47B4FE003BC827 /* PeakPicker.swift */; };
 		F2159A4A2BA60A6000A0B716 /* ContactTrickDataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2159A492BA60A6000A0B716 /* ContactTrickDataFlow.swift */; };
 		F2159A4C2BA60A8E00A0B716 /* ContactTrickRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2159A4B2BA60A8E00A0B716 /* ContactTrickRootView.swift */; };
 		F2159A4E2BA60AC000A0B716 /* ContactTrickProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2159A4D2BA60AC000A0B716 /* ContactTrickProvider.swift */; };
@@ -477,7 +476,6 @@
 		F25D829B2F61AD51007AE22C /* AnalyzingPill.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25D829A2F61AD50007AE22C /* AnalyzingPill.swift */; };
 		F270F68D2BAE374C00F6D8DD /* FontTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F270F68C2BAE374C00F6D8DD /* FontTracking.swift */; };
 		F273F9602DE73ABE00BF0FFC /* IOBTick0.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273F95F2DE73ABE00BF0FFC /* IOBTick0.swift */; };
-		F281B4A22ECF9087007185A9 /* LabelPlacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F281B4A12ECF9087007185A9 /* LabelPlacement.swift */; };
 		F29135522F02668F00BF9F95 /* OpenverseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29135512F02668F00BF9F95 /* OpenverseClient.swift */; };
 		F291355A2F03469E00BF9F95 /* ImageCommentInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29135592F03469E00BF9F95 /* ImageCommentInputView.swift */; };
 		F292C1CF2F5EF09700B08D81 /* DismissableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F292C1CE2F5EF08300B08D81 /* DismissableTextField.swift */; };
@@ -516,7 +514,6 @@
 		F2C73D622EB6602D00B700AB /* MainChartConfigDataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C73D612EB6602D00B700AB /* MainChartConfigDataFlow.swift */; };
 		F2C73D642EB6603900B700AB /* MainChartConfigProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C73D632EB6603900B700AB /* MainChartConfigProvider.swift */; };
 		F2C73D662EB6604500B700AB /* MainChartConfigStateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C73D652EB6604500B700AB /* MainChartConfigStateModel.swift */; };
-		F2C73D682EB8022C00B700AB /* CalculatedGeometries.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C73D672EB8022C00B700AB /* CalculatedGeometries.swift */; };
 		F2CBFF252F96E64A004CB668 /* LiveActivityBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CBFF242F96E64A004CB668 /* LiveActivityBanner.swift */; };
 		F2DCBC522F0B2DEB005D713E /* ManualNutritionOverrideEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DCBC512F0B2DEB005D713E /* ManualNutritionOverrideEditor.swift */; };
 		F2DCBC562F0B30A2005D713E /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DCBC552F0B30A2005D713E /* ViewExtensions.swift */; };
@@ -1161,7 +1158,6 @@
 		E26904AACA8D9C15D229D675 /* SnoozeStateModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SnoozeStateModel.swift; sourceTree = "<group>"; };
 		E625985B47742D498CB1681A /* NotificationsConfigProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NotificationsConfigProvider.swift; sourceTree = "<group>"; };
 		E9AAB83FB6C3B41EFD1846A0 /* AddTempTargetRootView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddTempTargetRootView.swift; sourceTree = "<group>"; };
-		F21580A42E47B4FE003BC827 /* PeakPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeakPicker.swift; sourceTree = "<group>"; };
 		F2159A492BA60A6000A0B716 /* ContactTrickDataFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTrickDataFlow.swift; sourceTree = "<group>"; };
 		F2159A4B2BA60A8E00A0B716 /* ContactTrickRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTrickRootView.swift; sourceTree = "<group>"; };
 		F2159A4D2BA60AC000A0B716 /* ContactTrickProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTrickProvider.swift; sourceTree = "<group>"; };
@@ -1197,7 +1193,6 @@
 		F25D829A2F61AD50007AE22C /* AnalyzingPill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzingPill.swift; sourceTree = "<group>"; };
 		F270F68C2BAE374C00F6D8DD /* FontTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontTracking.swift; sourceTree = "<group>"; };
 		F273F95F2DE73ABE00BF0FFC /* IOBTick0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOBTick0.swift; sourceTree = "<group>"; };
-		F281B4A12ECF9087007185A9 /* LabelPlacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelPlacement.swift; sourceTree = "<group>"; };
 		F29135512F02668F00BF9F95 /* OpenverseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenverseClient.swift; sourceTree = "<group>"; };
 		F29135592F03469E00BF9F95 /* ImageCommentInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCommentInputView.swift; sourceTree = "<group>"; };
 		F292C1CE2F5EF08300B08D81 /* DismissableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissableTextField.swift; sourceTree = "<group>"; };
@@ -1236,7 +1231,6 @@
 		F2C73D612EB6602D00B700AB /* MainChartConfigDataFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChartConfigDataFlow.swift; sourceTree = "<group>"; };
 		F2C73D632EB6603900B700AB /* MainChartConfigProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChartConfigProvider.swift; sourceTree = "<group>"; };
 		F2C73D652EB6604500B700AB /* MainChartConfigStateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChartConfigStateModel.swift; sourceTree = "<group>"; };
-		F2C73D672EB8022C00B700AB /* CalculatedGeometries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatedGeometries.swift; sourceTree = "<group>"; };
 		F2CBFF242F96E64A004CB668 /* LiveActivityBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityBanner.swift; sourceTree = "<group>"; };
 		F2DCBC512F0B2DEB005D713E /* ManualNutritionOverrideEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualNutritionOverrideEditor.swift; sourceTree = "<group>"; };
 		F2DCBC552F0B30A2005D713E /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
@@ -2045,10 +2039,7 @@
 		3833B51E260264AC003021B3 /* Chart */ = {
 			isa = PBXGroup;
 			children = (
-				F2C73D672EB8022C00B700AB /* CalculatedGeometries.swift */,
-				F281B4A12ECF9087007185A9 /* LabelPlacement.swift */,
 				38AAF8702600C1B0004AF583 /* MainChartView.swift */,
-				F21580A42E47B4FE003BC827 /* PeakPicker.swift */,
 			);
 			path = Chart;
 			sourceTree = "<group>";
@@ -3425,7 +3416,6 @@
 				F2E8D14D2F09616A0097F482 /* TimePickerSheet.swift in Sources */,
 				3811DEEB25CA063400A708ED /* Persisted.swift in Sources */,
 				3811DEEB25CA063400A708ED /* Persisted.swift in Sources */,
-				F21580A52E47B4FF003BC827 /* PeakPicker.swift in Sources */,
 				38E44537274E411700EC9A94 /* Disk+Helpers.swift in Sources */,
 				F2941FA32E787F9F00A9DD5D /* AppGroupCGM+UI.swift in Sources */,
 				F2EE83C52E739B0100D7177E /* CalendarShareStateModel.swift in Sources */,
@@ -3436,7 +3426,6 @@
 				3811DEB225C9D88300A708ED /* KeychainItemAccessibility.swift in Sources */,
 				385CEAC425F2F154002D6D5B /* AnnouncementsStorage.swift in Sources */,
 				38AEE73D25F0200C0013F05B /* FreeAPSSettings.swift in Sources */,
-				F2C73D682EB8022C00B700AB /* CalculatedGeometries.swift in Sources */,
 				38FCF3FD25E997A80078B0D1 /* PumpHistoryStorage.swift in Sources */,
 				F25D828A2F61A880007AE22C /* AIStatisticsView.swift in Sources */,
 				F25D82852F619748007AE22C /* Routes.swift in Sources */,
@@ -3466,7 +3455,6 @@
 				3894873A2614928B004DF424 /* DispatchTimer.swift in Sources */,
 				3895E4C625B9E00D00214B37 /* Preferences.swift in Sources */,
 				CE94598429E9E3E60047C9C6 /* WatchConfigStateModel.swift in Sources */,
-				F281B4A22ECF9087007185A9 /* LabelPlacement.swift in Sources */,
 				F2E8D15F2F0965F90097F482 /* FoodItemInfoPopup.swift in Sources */,
 				38DF1786276A73D400B3528F /* TagCloudView.swift in Sources */,
 				38B4F3CD25E5031100E76A18 /* Broadcaster.swift in Sources */,
